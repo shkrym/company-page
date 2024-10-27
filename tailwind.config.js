@@ -2,7 +2,7 @@
 export default {
     content: [
         './src/js/**/*.{js,ts,jsx,tsx}',
-        './themes/skeleton/**/*.php',
+        './themes/smiron-hp/**/*.php',
     ],
 
     theme: {

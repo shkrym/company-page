@@ -18,7 +18,7 @@
     "port": 80,
     "testsPort": 88,
     "themes": [
-        "./themes/skeleton"
+        "./themes/smiron-hp"
     ],
     "mappings": {
         "php.ini": "./php.ini",

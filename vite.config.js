@@ -6,7 +6,7 @@ import cssnano from 'cssnano';
 import tailwindcss from 'tailwindcss';
 
 export default defineConfig({
-    base: '/wp-content/themes/skeleton/public/dist/',
+    base: '/wp-content/themes/smiron-hp/public/dist/',
 	server: {
         port: 5173,
         host: true,
@@ -30,13 +30,13 @@ export default defineConfig({
     },
     plugins: [
         laravel({
-            input: ['src/js/app.js', 'src/css/app.css', 'src/js/app-bs.js', 'src/scss/app-bs.scss', 'src/css/app-fa.css'],
+            input: ['src/js/app.js', 'src/css/app.css', 'src/css/app-fa.css'],
             refresh: [
                 'src/**/*',
-                'themes/skeleton/**/*.php',
+                'themes/smiron-hp/**/*.php',
             ],
             buildDirectory: 'dist',
-            publicDirectory: 'themes/skeleton/public',
+            publicDirectory: 'themes/smiron-hp/public',
         }),
     ],
     assetsInclude: ['**/*.ttf', '**/*.woff', '**/*.woff2', '**/*.eot', '**/*.svg']

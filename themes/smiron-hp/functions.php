@@ -6,7 +6,7 @@
  */
 
 // 定数の設定
-define('VITE_URL', 'http://localhost:5173/wp-content/themes/skeleton/public/dist/');
+define('VITE_URL', 'http://localhost:5173/wp-content/themes/smiron-hp/public/dist/');
 
 // Viteの開発モード時のhotファイルが存在するかどうかを返す
 if (!function_exists('isViteHotFileExists')) {
