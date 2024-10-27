@@ -1,0 +1,36 @@
+{
+    "type": "module",
+    "scripts": {
+        "wp-env": "wp-env",
+        "start": "wp-env start --db_prefix=wp_ --xdebug && docker compose up -d",
+        "stop": "docker compose down && wp-env stop",
+        "restart": "docker compose down && wp-env start --db_prefix=wp_ --xdebug --update && docker compose up -d",
+        "remove": "docker compose down && wp-env destroy",
+        "exec": "wp-env run cli bash",
+        "db:import": "wp-env run cli wp db import sql/db.sql",
+        "db:update": "wp-env run cli wp db import sql/update.sql",
+        "init": "sh bin/init.sh",
+        "init:page": "sh bin/page.sh",
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "@fortawesome/fontawesome-free": "^6.4.2",
+        "@popperjs/core": "^2.11.8",
+        "@wordpress/env": "^9.10.0",
+        "autoprefixer": "^10.4.20",
+        "bootstrap": "^5.3.3",
+        "cssnano": "^7.0.6",
+        "laravel-vite-plugin": "^1.0.5",
+        "postcss": "^8.4.47",
+        "postcss-custom-properties": "^12.1.7",
+        "postcss-import": "^14.1.0",
+        "postcss-mixins": "^9.0.2",
+        "postcss-nested": "^5.0.6",
+        "postcss-simple-vars": "^6.0.3",
+        "sass": "^1.32.0",
+        "tailwindcss": "^3.2.1",
+        "vite": "^5.0",
+        "vite-plugin-full-reload": "^1.1.0"
+    }
+}

@@ -1,0 +1,29 @@
+services:
+
+    mailpit:
+        image: 'axllent/mailpit:latest'
+        container_name: skeleton-mailpit
+        ports:
+            - '${MAILPIT_PORT:-1025}:1025'
+            - '${MAILPIT_DASHBOARD_PORT:-8025}:8025'
+        networks:
+            - wpnetwork
+
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        environment:
+          PMA_HOST: 'fa6adc7c2a6ecebdf747e6ade270e3f7-mysql-1'
+          PMA_USER: 'root'
+          PMA_PASSWORD: 'password'
+          MEMORY_LIMIT: 256M
+          UPLOAD_LIMIT: 200M
+        ports:
+            - 4040:80
+        networks:
+            - wpnetwork
+
+networks:
+    wpnetwork:
+        external: true
+        name: fa6adc7c2a6ecebdf747e6ade270e3f7_default
+
