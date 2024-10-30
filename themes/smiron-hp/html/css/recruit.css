@@ -1,0 +1,151 @@
+@font-face {
+    font-family: 'Futura';
+    src: url('/themes/smiron-hp/html/fonts/futura-bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura';
+    src: url('/themes/smiron-hp/html/fonts/futura-book.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura';
+    src: url('/themes/smiron-hp/html/fonts/futura-medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+
+body {
+    overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 10px;
+    background-color: #7d1515;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(16, 24, 80, 0);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #b45757;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #c16e6e
+}
+
+
+
+header.sticky {
+    margin-top: -10px;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+    background: linear-gradient(to right, rgba(12, 68, 94, 0.1), rgba(147, 17, 3, 0.2));
+
+}
+
+/* for Navigation */
+li {
+    font-family: 'Futura';
+    font-weight: normal;
+    letter-spacing: 1.5px;
+    font-size: 13px;
+}
+
+#main-title {
+    font-family: 'Futura';
+    font-weight: bold;
+    letter-spacing: 7px;
+    text-shadow: 0px 4px 9px rgba(0, 0, 0, 0.5);
+}
+
+#main-subtitle {
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+
+/* for table*/
+.th-top {
+    vertical-align: top;
+}
+
+/* Checkbox */
+
+.custom-checkbox input[type="checkbox"] {
+    display: none;
+
+}
+
+.custom-checkbox .checkmark {
+    width: 24px;
+    height: 24px;
+    background-color: #eee;
+    border: 2px solid #0B154A;
+    display: inline-block;
+    border-radius: 4px;
+    position: relative;
+
+
+}
+
+.custom-checkbox input[type="checkbox"]:checked+.checkmark {
+    background-color: #0B154A;
+    color: #0B154A;
+
+}
+
+.custom-checkbox input[type="checkbox"]:checked+.checkmark::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 14px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -60%) rotate(45deg);
+}
+
+
+p,
+h2,
+input,
+label,
+select,
+button,
+textarea {
+    font-family: 'Noto Sans JP';
+
+}
+
+p {
+    font-weight: 500;
+}
+
+
+.footer-text {
+    font-family: 'Futura';
+    font-weight: 700
+}
+
+.footer-text-jp {
+    font-family: 'Noto Sans JP';
+    font-weight: bolder
+}
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
